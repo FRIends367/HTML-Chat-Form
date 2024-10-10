@@ -1,4 +1,4 @@
-# Chat Application Form
+# Chat Application
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,50 +9,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Welcome to the Chat Application</h1>
-    </header>
-    <main>
-        <section id="registration">
-            <h2>Create an Account</h2>
-            <form id="registrationForm">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                
-                <button type="submit">Register</button>
-            </form>
-        </section>
-        
-        <section id="login">
-            <h2>Login to Your Account</h2>
-            <form id="loginForm">
-                <label for="loginEmail">Email:</label>
-                <input type="email" id="loginEmail" name="loginEmail" required>
-                
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
-                
+        <div id="login-form">
+            <h2>Login</h2>
+            <form id="login" method="POST">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
-        </section>
-        
-        <section id="chat">
+        </div>
+        <div id="register-form">
+            <h2>Register</h2>
+            <form id="register" method="POST">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div id="chat-section">
             <h2>Chat Room</h2>
-            <div id="chatBox">
-                <div id="messages"></div>
-                <input type="text" id="messageInput" placeholder="Type your message here...">
-                <button id="sendMessage">Send</button>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 Chat Application. All rights reserved.</p>
-    </footer>
-
+            <div id="chat-box"></div>
+            <form id="chat-form" method="POST">
+                <input type="text" id="message" placeholder="Type your message here..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
